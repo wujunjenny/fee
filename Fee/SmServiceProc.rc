@@ -1,0 +1,306 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SmServiceProc.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\sm.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 259, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "",IDC_STATIC_VERSION,30,45,39,13,SS_NOPREFIX | NOT WS_VISIBLE
+    LTEXT           "",IDC_STATIC_COPYRIGHT,35,52,45,8,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "确定",IDOK,203,56,50,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,9,19,20,20
+    LTEXT           "版本信息：ISMP V2.5R414 —— 计费模块V4.5",IDC_STATIC,53,17,159,8
+    LTEXT           "版权所有：深圳市协尔信息系统有限公司",IDC_STATIC,53,35,135,8
+END
+
+IDD_SMSERVICEPROC_DIALOG DIALOGEX 0, 0, 291, 361
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "重新连接",IDC_BUTTON_CONNECT,137,181,54,15
+    PUSHBUTTON      "退出",ID_MYCANCEL,217,339,58,15
+    EDITTEXT        IDC_EDIT_IPADDR,68,131,72,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IPPORT,68,152,72,15,ES_AUTOHSCROLL
+    RTEXT           "IP地址：",IDC_STATIC_IP,14,134,47,10
+    RTEXT           "IP端口号：",IDC_STATIC,14,155,47,10
+    EDITTEXT        IDC_EDIT_ACCOUNT,204,131,72,15,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PASS,204,152,72,15,ES_PASSWORD | ES_AUTOHSCROLL
+    RTEXT           "帐号：",IDC_STATIC,150,134,47,10
+    RTEXT           "密码：",IDC_STATIC,150,155,47,10
+    GROUPBOX        "短消息连接参数设置",IDC_STATIC,7,116,276,57
+    RTEXT           "状态",IDC_STATIC,219,18,22,10
+    CTEXT           "未连",IDC_STATIC_STATE,247,15,29,14,SS_CENTERIMAGE | WS_BORDER
+    RTEXT           "发送数：",IDC_STATIC,179,254,33,9
+    PUSHBUTTON      "0",IDC_SENDCOUNT,217,251,58,15,BS_FLAT
+    RTEXT           "成功数：",IDC_STATIC,179,273,33,9
+    PUSHBUTTON      "0",IDC_SENDSUCCOUNT,217,270,58,15,BS_NOTIFY | BS_FLAT
+    RTEXT           "失败数：",IDC_STATIC,179,292,33,9
+    PUSHBUTTON      "0",IDC_SENDFAILCOUNT,217,289,58,15,BS_NOTIFY | BS_FLAT
+    RTEXT           "接收缓冲：",IDC_STATIC,13,216,55,9
+    PUSHBUTTON      "0",IDC_RECVBUFF,75,213,58,15,BS_FLAT
+    PUSHBUTTON      "0",IDC_QUESIZE,75,232,58,15,BS_FLAT
+    PUSHBUTTON      "0",IDC_TIMEMSG,75,251,58,15,BS_FLAT
+    PUSHBUTTON      "0",IDC_MSG,75,270,58,15,BS_FLAT
+    RTEXT           "消息缓冲：",IDC_STATIC,13,234,55,9
+    RTEXT           "时钟消息：",IDC_STATIC,13,253,55,9
+    RTEXT           "普通消息：",IDC_STATIC,13,272,55,9
+    RTEXT           "数据库超时：",IDC_STATIC,13,291,55,9
+    PUSHBUTTON      "0",IDC_DBTIMEOUT,75,289,58,15,BS_FLAT
+    PUSHBUTTON      "清零",IDC_ZERO,217,213,58,15
+    CONTROL         "",IDC_STATIC_DBLED,"Static",SS_ETCHEDFRAME,91,15,14,14,WS_EX_DLGMODALFRAME
+    CONTROL         "",IDC_STATIC_CONNLED,"Static",SS_ETCHEDFRAME,186,15,14,14,WS_EX_DLGMODALFRAME
+    RTEXT           "短信网关连接",IDC_STATIC,130,18,49,8
+    RTEXT           "数据库连接",IDC_STATIC,34,18,49,8
+    GROUPBOX        "连接状态",IDC_STATIC,7,3,276,105
+    RTEXT           "接收数：",IDC_STATIC,179,234,33,9
+    PUSHBUTTON      "0",IDC_RECV_DELIVER,217,232,58,15,BS_FLAT
+    GROUPBOX        "计数",IDC_STATIC,7,203,276,127
+    LTEXT           "内存消息数：",IDC_STATIC,19,312,48,9
+    LTEXT           "预付费内存消息数：",IDC_STATIC,141,312,76,9
+    PUSHBUTTON      "0",IDC_MAP_COUNT,75,308,58,14,BS_FLAT
+    PUSHBUTTON      "0",IDC_PREMAP_COUNT,217,308,58,14,BS_FLAT
+    PUSHBUTTON      "内存消息写入DB缓存",IDC_BUTTON_CATCH,195,181,80,15
+    PUSHBUTTON      "包月扣费记录查询",IDC_BTN_QUERY,63,181,70,15
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,15,36,260,65
+    PUSHBUTTON      "DBTest",IDC_DB_BUTTON,7,340,50,14
+END
+
+IDD_DIG_FIXMSG DIALOG 0, 0, 229, 139
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "包月扣费记录查询"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDT_SPID,77,53,64,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_SERVICEID,77,73,64,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_USERTEL,77,93,64,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_CHARGETEL,77,113,64,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    PUSHBUTTON      "查询",IDC_BTN_QUERY,166,14,47,14
+    DEFPUSHBUTTON   "关闭",IDOK,166,36,47,14
+    RTEXT           "企业代码",IDC_STATIC,39,55,34,10,NOT WS_GROUP
+    RTEXT           "业务代码",IDC_STATIC,39,75,34,10
+    RTEXT           "用户号码",IDC_STATIC,39,96,34,10
+    RTEXT           "计费号码",IDC_STATIC,39,116,34,10
+    GROUPBOX        "",IDC_STATIC,7,3,215,129
+    PUSHBUTTON      "0",IDC_COUNT,77,13,64,14,BS_FLAT
+    RTEXT           "包月扣费记录总数",IDC_STATIC,8,16,65,8
+    PUSHBUTTON      "",IDC_FEEMONTH_SHOW,77,33,64,14,BS_FLAT
+    RTEXT           "当前计费帐期",IDC_STATIC,24,36,49,8
+END
+
+IDD_DB_TEST_DIALOG DIALOGEX 0, 0, 316, 311
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DB_TEST"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,258,290,50,14
+    EDITTEXT        IDC_EDIT_LOGIN,7,7,126,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "connect",IDC_BUTTON_CONNECT,145,7,50,14
+    PUSHBUTTON      "query proc",IDC_QUERY_PROC_BUTTON,145,28,50,14
+    EDITTEXT        IDC_PROC_EDIT,7,27,126,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STMT_EDIT,7,45,302,55,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "exec sql",IDC_EXEC_BUTTON,7,290,50,14
+    PUSHBUTTON      "exec sql 2",IDC_EXEC2_BUTTON,78,290,50,14
+    LTEXT           "Static",IDC_STATIC_INPUT,7,120,140,152
+    PUSHBUTTON      "GetParam",IDC_BUTTON_QRY_PARAM,259,100,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,168,120,141,162
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Copyright", "版权所有 (C) 2003"
+            VALUE "FileDescription", "SP管理平台——计费模块"
+            VALUE "FileVersion", "V2.5R414"
+            VALUE "InternalName", "FEE"
+            VALUE "OriginalFilename", "Fee.EXE"
+            VALUE "ProductName", "计费模块"
+            VALUE "ProductVersion", "V2.5R414"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_SMSERVICEPROC_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        BOTTOMMARGIN, 354
+    END
+
+    IDD_DIG_FIXMSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_DB_TEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 304
+        HORZGUIDE, 120
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于“SP管理平台（ISMP）—计费模块”"
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\SmServiceProc.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
