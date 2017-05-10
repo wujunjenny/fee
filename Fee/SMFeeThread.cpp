@@ -1239,7 +1239,17 @@ VOID CSMFeeThread::SendStatusReport( SaveShortMessage data )
 	}
 	
 	report->Protocol = 0;
-	memcpy(report->StateCode, data.serviceUpID, 7);
+	if(strlen(data.unikey)==0 )
+	{
+		if(data.ReturnFirst==3)
+			sprintf(report->StateCode,"GW:%.4d",atoi(data.status));//erro product by send to gw
+		else
+			sprintf(report->StateCode,"AU:%.4d",atoi(data.status));//erro product by inner
+	}
+	else
+	{
+		memcpy(report->StateCode, data.serviceUpID, 7);
+	}
 	report->state = atoi(data.status);
 	strncpy((char *)report->ErrCode, data.status, sizeof(report->ErrCode));
 	
@@ -2500,7 +2510,7 @@ void CSMFeeThread::DeliverStatusFail(SaveShortMessage &data)
 	int FeeType= atoi(data.feeType);
 	int status = atoi(data.status);
 //gyx???
-	if(data.ReturnFirst == 1 || data.ReturnFirst == 2)
+	if(data.ReturnFirst != 0)
 	{
 		SendStatusReport( data);
 	}
